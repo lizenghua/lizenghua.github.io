@@ -446,10 +446,209 @@
 
 
   
+    <!--
+ * @message:
+ * @Author: lzh
+ * @since: 2019-10-16 16:07:30
+ * @lastTime: 2019-10-16 19:01:41
+ * @LastAuthor: Do not edit
+ * @copyright: lizenghua
+ -->
+<article id="post-css" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/16/css/">常用css系列（持续更新···）</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/16/css/" class="archive-article-date">
+  <time datetime="2019-10-16T12:10:11.915Z" itemprop="datePublished">
+    <i class="icon-calendar icon"></i>
+    
+    
+    今天
+    
+  </time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-单行超出文本出现省略号"><a href="#1-单行超出文本出现省略号" class="headerlink" title="1. 单行超出文本出现省略号"></a>1. 单行超出文本出现省略号</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">white-space</span><span class="selector-pseudo">:nowrap</span>; </span><br><span class="line"><span class="selector-tag">text-overflow</span><span class="selector-pseudo">:ellipsis</span>; </span><br><span class="line"><span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>; </span><br><span class="line"><span class="selector-tag">word-break</span><span class="selector-pseudo">:break-all</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-多行超出文本出现省略号"><a href="#2-多行超出文本出现省略号" class="headerlink" title="2. 多行超出文本出现省略号"></a>2. 多行超出文本出现省略号</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-box</span>;</span><br><span class="line">-webkit-box-orient:vertical; //检索伸缩盒对象的子元素的排列方式</span><br><span class="line">-webkit-line-clamp:3; //行数</span><br><span class="line"><span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>;</span><br><span class="line"><span class="selector-tag">word-break</span><span class="selector-pseudo">:break-all</span>; </span><br><span class="line"><span class="selector-tag">white-space</span><span class="selector-pseudo">:normal</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：这种方法适合于WebKit浏览器及移动端，对于IE浏览器兼容不好</p>
+</blockquote>
+<h3 id="3-背景透明，文字不透明"><a href="#3-背景透明，文字不透明" class="headerlink" title="3. 背景透明，文字不透明"></a>3. 背景透明，文字不透明</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background</span><span class="selector-pseudo">:rgba(255</span>, 255, 255, 0<span class="selector-class">.75</span>)!<span class="selector-tag">important</span>;</span><br><span class="line">filter:Alpha(opacity=75);</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/10/16/css/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/16/css/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <!--
+ * @message:
+ * @Author: lzh
+ * @since: 2019-10-16 16:07:30
+ * @lastTime: 2019-10-16 19:01:41
+ * @LastAuthor: Do not edit
+ * @copyright: lizenghua
+ -->
+<article id="post-vue_axios" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/16/vue_axios/">vue-axios封装和api接口管理</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/16/vue_axios/" class="archive-article-date">
+  <time datetime="2019-10-16T11:32:37.432Z" itemprop="datePublished">
+    <i class="icon-calendar icon"></i>
+    
+    
+    今天
+    
+  </time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="项目中关于axios的目录结构"><a href="#项目中关于axios的目录结构" class="headerlink" title="项目中关于axios的目录结构"></a>项目中关于axios的目录结构</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">├── src</span><br><span class="line">|    ├── api</span><br><span class="line">|    |    └── modules <span class="comment">// 按模块就行区分，有利于多人协作开发</span></span><br><span class="line">|    |    |   ├── home.js</span><br><span class="line">|    |    |   ├── category.js</span><br><span class="line">|    |    |   └── .....</span><br><span class="line">|    |    ├── base.js <span class="comment">// 管理接口域名（便于处理接口域名有多个的情况）</span></span><br><span class="line">|    |    └── index.js <span class="comment">// api接口的统一出口文件</span></span><br><span class="line">|    ├── utils</span><br><span class="line">|    |    └── http.js <span class="comment">// 封装axios</span></span><br><span class="line">|    ├── main.js</span><br></pre></td></tr></table></figure>
+
+<p>此文档中需要安装axios插件，使用vant的UI组件库</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">npm i axios -S</span><br><span class="line"></span><br><span class="line">npm i vant -S</span><br><span class="line"><span class="comment">//按需引入组件：安装babel插件</span></span><br><span class="line">npm i babel-plugin-<span class="keyword">import</span> -D</span><br><span class="line"><span class="comment">// babel.config.js 中配置</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    [<span class="string">'import'</span>, &#123;</span><br><span class="line">      libraryName: <span class="string">'vant'</span>,</span><br><span class="line">      libraryDirectory: <span class="string">'es'</span>,</span><br><span class="line">      style: <span class="literal">true</span></span><br><span class="line">    &#125;, <span class="string">'vant'</span>]</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>接下来先将各相关文件的代码贴出来<br></p>
+</blockquote>
+<br>
+        
+          <a class="article-more-a" href="/2019/10/16/vue_axios/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">架构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/16/vue_axios/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
   
 
 
@@ -539,15 +738,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">算法</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
