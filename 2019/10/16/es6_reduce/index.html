@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//lizenghua.github.io">
-  <title>Archives: 2019/10 | 欢迎来到李增华的博客</title>
+  <title>reduce 使用 | 欢迎来到李增华的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="李增华的博客">
-<meta name="keywords" content="李增华,博客,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,编程,代码,开源,IT网站,html,css,css3,node,vue,element-ui">
-<meta property="og:type" content="website">
-<meta property="og:title" content="欢迎来到李增华的博客">
-<meta property="og:url" content="//lizenghua.github.io/archives/2019/10/index.html">
+  <meta name="description" content="1. 语法   12345678arr.reduce(callback,[initialValue]);// reduce 为数组中的每个元素依次执行回调函数// callback: 有四个参数  (previousValue, currentValue, index, array)// 1.1 previousValue: 上一次调用回调返回的值，或者是初始值// 1.2 currentValu">
+<meta name="keywords" content="es6">
+<meta property="og:type" content="article">
+<meta property="og:title" content="reduce 使用">
+<meta property="og:url" content="//lizenghua.github.io/2019/10/16/es6_reduce/index.html">
 <meta property="og:site_name" content="欢迎来到李增华的博客">
-<meta property="og:description" content="李增华的博客">
+<meta property="og:description" content="1. 语法   12345678arr.reduce(callback,[initialValue]);// reduce 为数组中的每个元素依次执行回调函数// callback: 有四个参数  (previousValue, currentValue, index, array)// 1.1 previousValue: 上一次调用回调返回的值，或者是初始值// 1.2 currentValu">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-16T13:03:34.236Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="欢迎来到李增华的博客">
-<meta name="twitter:description" content="李增华的博客">
+<meta name="twitter:title" content="reduce 使用">
+<meta name="twitter:description" content="1. 语法   12345678arr.reduce(callback,[initialValue]);// reduce 为数组中的每个元素依次执行回调函数// callback: 有四个参数  (previousValue, currentValue, index, array)// 1.1 previousValue: 上一次调用回调返回的值，或者是初始值// 1.2 currentValu">
   
     <link rel="alternative" href="/atom.xml" title="欢迎来到李增华的博客" type="application/atom+xml">
   
@@ -144,73 +145,27 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <!--
+ * @message:
+ * @Author: lzh
+ * @since: 2019-10-16 16:07:30
+ * @lastTime: 2019-10-16 19:01:41
+ * @LastAuthor: Do not edit
+ * @copyright: lizenghua
+ -->
+<article id="post-es6_reduce" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/16/entires-map-reduce/" class="archive-article-date">
-  <time datetime="2019-10-16T12:21:38.616Z" itemprop="datePublished">
-    <i class="icon-calendar icon"></i>
-    
-    
-    今天
-    
-  </time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/16/entires-map-reduce/">对象转指定的数组对象（entires-map-reduce）</a>
+    <h1 class="article-title" itemprop="name">
+      reduce 使用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/16/es6_reduce/" class="archive-article-date">
+        
+        <a href="/2019/10/16/es6_reduce/" class="archive-article-date">
   <time datetime="2019-10-16T12:18:00.654Z" itemprop="datePublished">
     <i class="icon-calendar icon"></i>
     
@@ -220,16 +175,78 @@
   </time>
 </a>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/16/es6_reduce/">reduce 使用</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h6 id="1-语法"><a href="#1-语法" class="headerlink" title="1. 语法"></a>1. 语法</h6>   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">arr.reduce(callback,[initialValue]);</span><br><span class="line"><span class="comment">// reduce 为数组中的每个元素依次执行回调函数</span></span><br><span class="line"><span class="comment">// callback: 有四个参数  (previousValue, currentValue, index, array)</span></span><br><span class="line"><span class="comment">// 1.1 previousValue: 上一次调用回调返回的值，或者是初始值</span></span><br><span class="line"><span class="comment">// 1.2 currentValue: 数组中当前被处理的元素</span></span><br><span class="line"><span class="comment">// 1.3 index: 当前元素在数组中的索引</span></span><br><span class="line"><span class="comment">// 1.4 array: 调用 reduce 的数组,这里是arr</span></span><br><span class="line"><span class="comment">// initialValue: 作为第一次调用 callback 的第一个参数（初始值）</span></span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<h6 id="2-关于-initialValue-参数"><a href="#2-关于-initialValue-参数" class="headerlink" title="2. 关于 initialValue 参数"></a>2. 关于 <strong>initialValue</strong> 参数</h6><p>   ​    2.1 例子1：不设置 initialValue 参数情况</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> sum = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, cur, index, arr</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">console</span>.log(prev, cur, index);</span><br><span class="line">    <span class="keyword">return</span> prev + cur;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="built_in">console</span>.log(arr, sum);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>打印结果</p>
+<p>1 2 1</p>
+<p>3 3 2</p>
+<p>6 4 3</p>
+<p>[1,2,3,4] 10</p>
+</blockquote>
+<p>以上例子中没有设置 初始值，index 是从 1 开始的， 第一次的 prev 值是数组的第一个值，数组长度是4，但是 reduce 函数只循环了 3 次。</p>
+<a id="more"></a>
+
+<p>​    2.2 例子2 设置了 initialValue 参数</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> sum = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, cur, index, arr</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(prev, cur, index);</span><br><span class="line">    <span class="keyword">return</span> prev + cur;</span><br><span class="line">&#125;,<span class="number">0</span>); <span class="comment">//注意这里设置了初始值</span></span><br><span class="line"><span class="built_in">console</span>.log(arr, sum);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>打印结果</p>
+<p>0 1 0</p>
+<p>1 2 1</p>
+<p>3 3 2</p>
+<p>6 4 3</p>
+<p>[1,2,3,4] 10</p>
+</blockquote>
+<p>以上例子中设置了 初始值，index 是从 0 开始， 第一次的 prev 值是设置的初始值 0，数组长度4， reduce函数循环了 4 次</p>
+<h5 id="结论：如果没有提供-initialValue，reduce-会从索引-1-的地方开始执行-callback-方法，-跳过第一个索引。如果提供-initialValue，从索引-0-开始"><a href="#结论：如果没有提供-initialValue，reduce-会从索引-1-的地方开始执行-callback-方法，-跳过第一个索引。如果提供-initialValue，从索引-0-开始" class="headerlink" title="* 结论：如果没有提供 initialValue，reduce 会从索引 1 的地方开始执行 callback 方法， 跳过第一个索引。如果提供 initialValue，从索引 0 开始"></a>* 结论：如果没有提供 initialValue，reduce 会从索引 1 的地方开始执行 callback 方法， 跳过第一个索引。如果提供 initialValue，从索引 0 开始</h5><h5 id="3-如果数组为空"><a href="#3-如果数组为空" class="headerlink" title="3. 如果数组为空"></a>3. 如果数组为空</h5><p>   3.1 没有给定初始值</p>
+   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  arr = [];</span><br><span class="line"><span class="keyword">var</span> sum = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, cur, index, arr</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(prev, cur, index);</span><br><span class="line">    <span class="keyword">return</span> prev + cur;</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//报错，"TypeError: Reduce of empty array with no initial value"</span></span><br></pre></td></tr></table></figure>
+
+<p>   3.2 给定初始值</p>
+   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span>  arr = [];</span><br><span class="line"><span class="keyword">var</span> sum = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">prev, cur, index, arr</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(prev, cur, index);</span><br><span class="line">    <span class="keyword">return</span> prev + cur;</span><br><span class="line">&#125;，<span class="number">0</span>)</span><br><span class="line"><span class="built_in">console</span>.log(arr, sum); <span class="comment">// [] 0</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="一般来说我们提供初始值通常更安全"><a href="#一般来说我们提供初始值通常更安全" class="headerlink" title="* 一般来说我们提供初始值通常更安全"></a>* 一般来说我们提供初始值通常更安全</h5><h4 id="4-简单用法"><a href="#4-简单用法" class="headerlink" title="4. 简单用法"></a>4. 简单用法</h4><p>   ​    4.1 数组求和，求乘积</p>
+   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">let</span> sum = arr.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>x+y);</span><br><span class="line"><span class="keyword">let</span> mu1 = arr.reduce(<span class="function">(<span class="params">x,y</span>)=&gt;</span>x*y);</span><br><span class="line"><span class="built_in">console</span>.log(sum); <span class="comment">// 求和 10</span></span><br><span class="line">cosole.log(mu1); <span class="comment">// 求乘积 24</span></span><br></pre></td></tr></table></figure>
+
+
+<h4 id="5-高级用法"><a href="#5-高级用法" class="headerlink" title="5. 高级用法"></a>5. 高级用法</h4><p>   5.1 计算数组中每个元素出现的次数</p>
+   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> names = [<span class="string">'zhangsan'</span>, <span class="string">'lisi'</span>, <span class="string">'wangwu'</span>, <span class="string">'zhaoliu'</span>, <span class="string">'zhangsan'</span>];</span><br><span class="line"><span class="keyword">let</span> nameNum = names.reduce(<span class="function">(<span class="params">prev,cur</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(cur <span class="keyword">in</span> prev)&#123;</span><br><span class="line">        prev[cur] ++;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        prev[cur] = <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> prev;</span><br><span class="line">&#125;,&#123;&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(nameNum); <span class="comment">// &#123;zhangsan: 2, lisi: 1, wangwu: 1, zhaoliu: 1&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>   5.2 数组去重</p>
+   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">4</span>, <span class="number">1</span>];</span><br><span class="line"><span class="keyword">let</span> newArr = arr.reduce(<span class="function">(<span class="params">prev,cur</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!prev.includes(cur))&#123;</span><br><span class="line">        <span class="keyword">return</span> prev.concat(cur);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> prev;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,[]);</span><br><span class="line"><span class="built_in">console</span>.log(newArr); <span class="comment">// [1,2,3,4]</span></span><br></pre></td></tr></table></figure>
+
+<p>   5.3 将二维数组转化为一维</p>
+   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [[<span class="number">0</span>,<span class="number">1</span>], [<span class="number">2</span>,<span class="number">3</span>], [<span class="number">4</span>,<span class="number">5</span>]];</span><br><span class="line"><span class="keyword">let</span> newArr = arr.reduce(<span class="function">(<span class="params">prev,cur</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> prev.concat(cur);</span><br><span class="line">&#125;,[]);</span><br><span class="line"><span class="built_in">console</span>.log(newArr); <span class="comment">// [0,1,2,3,4,5]</span></span><br></pre></td></tr></table></figure>
+
+<p>   5.4 将多维数组转化为一维</p>
+   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [[<span class="number">0</span>,<span class="number">1</span>], [<span class="number">2</span>,<span class="number">3</span>], [<span class="number">4</span>, [<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>]]];</span><br><span class="line"><span class="comment">/*const newArr = function(arr)&#123;</span></span><br><span class="line"><span class="comment">   return arr.reduce((pre,cur)=&gt;pre.concat(Array.isArray(cur)?newArr(cur):cur),[])</span></span><br><span class="line"><span class="comment">&#125;*/</span></span><br><span class="line"><span class="keyword">const</span> newArr = <span class="function">(<span class="params">arr</span>) =&gt;</span> arr.reduce(<span class="function">(<span class="params">prev,cur</span>) =&gt;</span> prev.concat(<span class="built_in">Array</span>.isArray(cur) ? newArr(cur) : cur),[]);</span><br><span class="line"><span class="built_in">console</span>.log(newArr(arr)); <span class="comment">//[0,1,2,3,4,5,6,7]</span></span><br></pre></td></tr></table></figure>
+
+<p>   5.5 对象里的属性求和</p>
+   <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> result = [</span><br><span class="line">    &#123;</span><br><span class="line">        subject: <span class="string">'math'</span>,</span><br><span class="line">        score: <span class="number">10</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        subject: <span class="string">'chinese'</span>,</span><br><span class="line">        score: <span class="number">20</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        subject: <span class="string">'english'</span>,</span><br><span class="line">        score: <span class="number">30</span></span><br><span class="line">    &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> sum = result.reduce(<span class="function">(<span class="params">prev,cur</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> cur.score + prev;</span><br><span class="line">&#125;,<span class="number">0</span>);</span><br><span class="line"><span class="built_in">console</span>.log(sum); <span class="comment">// 60</span></span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li><p>参考</p>
+<p><a href="https://www.jianshu.com/p/e375ba1cfc47" target="_blank" rel="noopener">https://www.jianshu.com/p/e375ba1cfc47</a></p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -241,72 +258,141 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </!-->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <!-- <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a> -->
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <!-- <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a> -->
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://bshare.optimix.asia/barCode?site=weixin&url=http://lizenghua.github.io/2019/10/16/es6_reduce/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/16/es6_data/" class="archive-article-date">
-  <time datetime="2019-10-16T12:14:51.653Z" itemprop="datePublished">
-    <i class="icon-calendar icon"></i>
-    
-    
-    今天
-    
-  </time>
-</a>
 
+  
+<nav id="article-nav">
+  
+    <a href="/2019/10/16/entires-map-reduce/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          对象转指定的数组对象（entires-map-reduce）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/10/16/es6_data/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">将扁平化的数据转化为多维数组</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/16/es6_data/">将扁平化的数据转化为多维数组</a>
-    </h1>
+        
+        
+    </div>
+</aside>
+
+
+
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
+    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+      <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "nBmcTeFquEx7xFiUeSfdoxJJ-gzGzoHsz",
+            app_key: "0xja6r6XMcCet4U8qigB6ETz",
+            placeholder: "ヾﾉ≧∀≦)o 来呀！快活呀！~",
+            avatar:"mm"
+        });
+    }
+</script>
+
+    </section>
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2019/10/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/10/page/2/">Next &raquo;</a>
-    </nav>
   
+
+  
+
+  
+
+  
+
 
 
           </div>
@@ -329,8 +415,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
