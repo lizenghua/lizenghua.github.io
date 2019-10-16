@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//lizenghua.github.io">
-  <title>测试我的第一个博客 | 欢迎来到李增华的博客</title>
+  <title>vue-axios封装和api接口管理 | 欢迎来到李增华的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="李增华的博客">
-<meta name="keywords" content="NodeJS,VueJs">
+  <meta name="description" content="项目中关于axios的目录结构1234567891011├── src|    ├── api|    |    └── modules // 按模块就行区分，有利于多人协作开发|    |    |   ├── home.js|    |    |   ├── category.js|    |    |   └── .....|    |    ├── base.js // 管理接口域名（便于">
+<meta name="keywords" content="vue,架构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="测试我的第一个博客">
-<meta property="og:url" content="//lizenghua.github.io/2019/10/16/test/index.html">
+<meta property="og:title" content="vue-axios封装和api接口管理">
+<meta property="og:url" content="//lizenghua.github.io/2019/10/16/vue_axios/index.html">
 <meta property="og:site_name" content="欢迎来到李增华的博客">
-<meta property="og:description" content="李增华的博客">
+<meta property="og:description" content="项目中关于axios的目录结构1234567891011├── src|    ├── api|    |    └── modules // 按模块就行区分，有利于多人协作开发|    |    |   ├── home.js|    |    |   ├── category.js|    |    |   └── .....|    |    ├── base.js // 管理接口域名（便于">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-16T10:08:20.357Z">
+<meta property="og:updated_time" content="2019-10-16T11:40:32.675Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="测试我的第一个博客">
-<meta name="twitter:description" content="李增华的博客">
+<meta name="twitter:title" content="vue-axios封装和api接口管理">
+<meta name="twitter:description" content="项目中关于axios的目录结构1234567891011├── src|    ├── api|    |    └── modules // 按模块就行区分，有利于多人协作开发|    |    |   ├── home.js|    |    |   ├── category.js|    |    |   └── .....|    |    ├── base.js // 管理接口域名（便于">
   
     <link rel="alternative" href="/atom.xml" title="欢迎来到李增华的博客" type="application/atom+xml">
   
@@ -153,27 +153,89 @@
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
-<article id="post-test" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-vue_axios" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      测试我的第一个博客
+      vue-axios封装和api接口管理
     </h1>
   
 
         
-        <a href="/2019/10/16/test/" class="archive-article-date">
-  	<time datetime="2019-10-16T08:56:17.184Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
+        <a href="/2019/10/16/vue_axios/" class="archive-article-date">
+  	<time datetime="2019-10-16T11:32:37.432Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="项目中关于axios的目录结构"><a href="#项目中关于axios的目录结构" class="headerlink" title="项目中关于axios的目录结构"></a>项目中关于axios的目录结构</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">├── src</span><br><span class="line">|    ├── api</span><br><span class="line">|    |    └── modules <span class="comment">// 按模块就行区分，有利于多人协作开发</span></span><br><span class="line">|    |    |   ├── home.js</span><br><span class="line">|    |    |   ├── category.js</span><br><span class="line">|    |    |   └── .....</span><br><span class="line">|    |    ├── base.js <span class="comment">// 管理接口域名（便于处理接口域名有多个的情况）</span></span><br><span class="line">|    |    └── index.js <span class="comment">// api接口的统一出口文件</span></span><br><span class="line">|    ├── utils</span><br><span class="line">|    |    └── http.js <span class="comment">// 封装axios</span></span><br><span class="line">|    ├── main.js</span><br></pre></td></tr></table></figure>
+
+<p>此文档中需要安装axios插件，使用vant的UI组件库</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">npm i axios -S</span><br><span class="line"></span><br><span class="line">npm i vant -S</span><br><span class="line"><span class="comment">//按需引入组件：安装babel插件</span></span><br><span class="line">npm i babel-plugin-<span class="keyword">import</span> -D</span><br><span class="line"><span class="comment">// babel.config.js 中配置</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  plugins: [</span><br><span class="line">    [<span class="string">'import'</span>, &#123;</span><br><span class="line">      libraryName: <span class="string">'vant'</span>,</span><br><span class="line">      libraryDirectory: <span class="string">'es'</span>,</span><br><span class="line">      style: <span class="literal">true</span></span><br><span class="line">    &#125;, <span class="string">'vant'</span>]</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>接下来先将各相关文件的代码贴出来<br></p>
+</blockquote>
+<br>
+
+<ul>
+<li><h3 id="utils文件夹下的-http-js"><a href="#utils文件夹下的-http-js" class="headerlink" title="utils文件夹下的 http.js"></a>utils文件夹下的 http.js</h3><blockquote>
+<p>公用函数进行抽出，简化代码，尽量保证单一职责原则</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @message: axios封装</span></span><br><span class="line"><span class="comment"> * @Author: lzh</span></span><br><span class="line"><span class="comment"> * @since: 2019-09-25 18:49:33</span></span><br><span class="line"><span class="comment"> * @lastTime: 2019-09-26 10:26:32</span></span><br><span class="line"><span class="comment"> * @LastAuthor: Do not edit</span></span><br><span class="line"><span class="comment"> * @copyright: lizenghua</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">"axios"</span>;</span><br><span class="line"><span class="keyword">import</span> QS <span class="keyword">from</span> <span class="string">"qs"</span>; <span class="comment">// 序列化post类型的数据</span></span><br><span class="line"><span class="keyword">import</span> &#123; Toast &#125; <span class="keyword">from</span> <span class="string">"vant"</span>;</span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">"../router"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @description: 提示函数 （禁止点击蒙层，显示一秒后关闭）</span></span><br><span class="line"><span class="comment"> * @param &#123;String&#125; msg 【提示文本】</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> tip = <span class="function"><span class="params">msg</span> =&gt;</span> &#123;</span><br><span class="line">  Toast(&#123;</span><br><span class="line">    message: msg,</span><br><span class="line">    duration: <span class="number">1000</span>,</span><br><span class="line">    forbidClick: <span class="literal">true</span></span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @description: 跳转登录页 (携带当前页面路由，以及在登录页面完成登录后返回当前页面)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> toLogin = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  router.replace(&#123;</span><br><span class="line">    path: <span class="string">"/login"</span>,</span><br><span class="line">    query: &#123;</span><br><span class="line">      redirect: router.currentRoute.fullPath</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @description: 请求失败后的错误统一处理</span></span><br><span class="line"><span class="comment"> * @param &#123;Number&#125; status 【请求失败的状态码】</span></span><br><span class="line"><span class="comment"> * @param &#123;String&#125; msg 【请求失败时携带的错误文本信息】</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> errorHandle = <span class="function">(<span class="params">status, msg</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">switch</span> (status) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">404</span>:</span><br><span class="line">      tip(<span class="string">"请求的资源不存在"</span>);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">      <span class="built_in">console</span>.log(msg);</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 设置请求超时</span></span><br><span class="line">axios.defaults.timeout = <span class="number">1000</span> * <span class="number">12</span>;</span><br><span class="line"><span class="comment">// 设置post请求头</span></span><br><span class="line">axios.defaults.headers.post[<span class="string">"Content-Type"</span>] =</span><br><span class="line">  <span class="string">"application/x-www-form-urlencoded;charset=UTF-8"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 请求拦截器</span></span><br><span class="line">axios.interceptors.request.use(</span><br><span class="line">  config =&gt; &#123;</span><br><span class="line">    <span class="comment">// Do something before request is sent</span></span><br><span class="line">    <span class="keyword">return</span> config;</span><br><span class="line">  &#125;,</span><br><span class="line">  error =&gt; &#123;</span><br><span class="line">    <span class="comment">// Do something with request error</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 响应拦截器</span></span><br><span class="line">axios.interceptors.response.use(</span><br><span class="line">  response =&gt; &#123;</span><br><span class="line">    <span class="comment">// Do something before response is sent</span></span><br><span class="line">    <span class="keyword">return</span> response;</span><br><span class="line">  &#125;,</span><br><span class="line">  error =&gt; &#123;</span><br><span class="line">    <span class="comment">// Do something with response error</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">  &#125;</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * @description: 请求方法封装</span></span><br><span class="line"><span class="comment"> * @param &#123;String&#125; url 【请求的url地址，默认空字符串】</span></span><br><span class="line"><span class="comment"> * @param &#123;Object&#125; params 【请求时携带的参数，默认空对象】</span></span><br><span class="line"><span class="comment"> * @param &#123;String&#125; type 【请求方法，默认get请求】</span></span><br><span class="line"><span class="comment"> * @return: 【Promise对象】</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="function"><span class="keyword">function</span> <span class="title">$axios</span>(<span class="params">url = <span class="string">""</span>, params = &#123;&#125;, type = <span class="string">"GET"</span></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> promise;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (type.toUpperCase() === <span class="string">"GET"</span>) &#123;</span><br><span class="line">      promise = axios.get(url, &#123; <span class="attr">params</span>: params &#125;);</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (type.toUpperCase() === <span class="string">"POST"</span>) &#123;</span><br><span class="line">      promise = axios.post(url, QS.stringify(params));</span><br><span class="line">    &#125;</span><br><span class="line">    promise</span><br><span class="line">      .then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span><br><span class="line">        resolve(res.data);</span><br><span class="line">      &#125;)</span><br><span class="line">      .catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">        reject(err.data);</span><br><span class="line">      &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<br>
+
+<ul>
+<li><h3 id="api文件夹下的-base-js"><a href="#api文件夹下的-base-js" class="headerlink" title="api文件夹下的 base.js"></a>api文件夹下的 base.js</h3><blockquote>
+<p>考虑到接口会有多个不同域名的情况，所以通过js变量来控制接口域名;<br>如果我们的项目不是高并发的大项目只有一个域名的接口，则可以在http.js中使用node环境变量来控制baseUrl的值而不需要此文件</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 附加代码(在http.js中添加)：node环境切换</span></span><br><span class="line"><span class="keyword">if</span> (process.env.NODE_ENV == <span class="string">'development'</span>) &#123;    </span><br><span class="line">    axios.defaults.baseURL = <span class="string">'/api'</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (process.env.NODE_ENV == <span class="string">'debug'</span>) &#123;    </span><br><span class="line">    axios.defaults.baseURL = <span class="string">''</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (process.env.NODE_ENV == <span class="string">'production'</span>) &#123;    </span><br><span class="line">    axios.defaults.baseURL = <span class="string">'http://api.xxx.com/'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @message: 管理接口域名【便于处理接口域名有多个的情况】</span></span><br><span class="line"><span class="comment"> * @Author: lzh</span></span><br><span class="line"><span class="comment"> * @since: 2019-09-25 20:36:51</span></span><br><span class="line"><span class="comment"> * @lastTime: 2019-09-26 10:04:18</span></span><br><span class="line"><span class="comment"> * @LastAuthor: Do not edit</span></span><br><span class="line"><span class="comment"> * @copyright: lizenghua</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> baseurl = &#123;</span><br><span class="line">  main: <span class="string">"http://xx.xx.com/xx/api"</span>,</span><br><span class="line">  sub: <span class="string">"http://xxx.xxx.com/xx/api"</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> baseurl;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<ul>
+<li><h3 id="api文件夹-–-modules文件夹下的home-js"><a href="#api文件夹-–-modules文件夹下的home-js" class="headerlink" title="api文件夹 – modules文件夹下的home.js"></a>api文件夹 – modules文件夹下的home.js</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @message: 首页模块接口</span></span><br><span class="line"><span class="comment"> * @Author: lzh</span></span><br><span class="line"><span class="comment"> * @since: 2019-09-25 20:39:54</span></span><br><span class="line"><span class="comment"> * @lastTime: 2019-09-26 10:04:07</span></span><br><span class="line"><span class="comment"> * @LastAuthor: Do not edit</span></span><br><span class="line"><span class="comment"> * @copyright: lizenghua</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">import</span> baseurl <span class="keyword">from</span> <span class="string">"../base"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; $axios &#125; <span class="keyword">from</span> <span class="string">"@/utils/http"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> home = &#123;</span><br><span class="line">  <span class="comment">// 轮播图</span></span><br><span class="line">  getHomeBanner() &#123;</span><br><span class="line">    <span class="keyword">return</span> $axios(<span class="string">`<span class="subst">$&#123;baseurl.main&#125;</span>/homeApi`</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> home;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<br>
+
+<ul>
+<li><h3 id="api文件夹中的-index-js"><a href="#api文件夹中的-index-js" class="headerlink" title="api文件夹中的 index.js"></a>api文件夹中的 index.js</h3><blockquote>
+<p>把api接口根据功能划分为多个模块，利于多人协作开发</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @message:api接口的统一出口</span></span><br><span class="line"><span class="comment"> * @Author: lzh</span></span><br><span class="line"><span class="comment"> * @since: 2019-09-25 20:36:45</span></span><br><span class="line"><span class="comment"> * @lastTime: 2019-09-25 20:41:44</span></span><br><span class="line"><span class="comment"> * @LastAuthor: Do not edit</span></span><br><span class="line"><span class="comment"> * @copyright: lizenghua</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="comment">// 首页模块接口</span></span><br><span class="line"><span class="keyword">import</span> home <span class="keyword">from</span> <span class="string">"./modules/home"</span>;</span><br><span class="line"><span class="comment">// 分类模块接口</span></span><br><span class="line"><span class="keyword">import</span> category <span class="keyword">from</span> <span class="string">"./modules/category"</span>;</span><br><span class="line"><span class="comment">// 其他模块....</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  home,</span><br><span class="line">  category</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<br>
+
+<ul>
+<li><h4 id="main-js"><a href="#main-js" class="headerlink" title="main.js"></a>main.js</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @message: 入口文件</span></span><br><span class="line"><span class="comment"> * @Author: lzh</span></span><br><span class="line"><span class="comment"> * @since: 2019-09-25 11:45:44</span></span><br><span class="line"><span class="comment"> * @lastTime: 2019-09-26 10:04:30</span></span><br><span class="line"><span class="comment"> * @LastAuthor: Do not edit</span></span><br><span class="line"><span class="comment"> * @copyright: lizenghua</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">"./App.vue"</span>;</span><br><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">"./router"</span>;</span><br><span class="line"><span class="keyword">import</span> api <span class="keyword">from</span> <span class="string">"./api"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 引入全局ui组件</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">"@/plugins/vant"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将api挂载到vue的原型上，方便api调用</span></span><br><span class="line">Vue.prototype.$api = api;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<br>
+
+<ul>
+<li><h4 id="调用接口（接口的使用）"><a href="#调用接口（接口的使用）" class="headerlink" title="调用接口（接口的使用）"></a>调用接口（接口的使用）</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment"> * @message: </span></span><br><span class="line"><span class="comment"> * @Author: lzh</span></span><br><span class="line"><span class="comment"> * @since: 2019-09-25 16:47:46</span></span><br><span class="line"><span class="comment"> * @lastTime: 2019-09-26 10:32:34</span></span><br><span class="line"><span class="comment"> * @LastAuthor: Do not edit</span></span><br><span class="line"><span class="comment"> * @copyright: lizenghua</span></span><br><span class="line"><span class="comment"> --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"home"</span>&gt;</span></span><br><span class="line">    首页</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"><span class="actionscript">  name: <span class="string">"Home"</span>,</span></span><br><span class="line">  created() &#123;</span><br><span class="line"><span class="actionscript">    <span class="keyword">this</span>.onLoadBanner();</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onLoadBanner() &#123;</span><br><span class="line"><span class="actionscript">      <span class="comment">// 接口的使用方式：</span></span></span><br><span class="line"><span class="javascript">      <span class="keyword">this</span>.$api.home.getHomeBanner().then(<span class="function"><span class="params">res</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(res);</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">"scss"</span> <span class="attr">scoped</span>&gt;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<hr>
+<h4 id="参考文章："><a href="#参考文章：" class="headerlink" title="参考文章："></a>参考文章：</h4><h5 id="1-作者：愣锤（https-juejin-im-post-5b55c118f265da0f6f1aa354-comment）"><a href="#1-作者：愣锤（https-juejin-im-post-5b55c118f265da0f6f1aa354-comment）" class="headerlink" title="1. 作者：愣锤（https://juejin.im/post/5b55c118f265da0f6f1aa354#comment）"></a>1. 作者：愣锤（<a href="https://juejin.im/post/5b55c118f265da0f6f1aa354#comment）" target="_blank" rel="noopener">https://juejin.im/post/5b55c118f265da0f6f1aa354#comment）</a></h5>
       
 
       
@@ -186,11 +248,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">NodeJS</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">VueJs</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">架构</a>
         		</li>
       		
 		</ul>
@@ -246,7 +308,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://bshare.optimix.asia/barCode?site=weixin&url=http://lizenghua.github.io/2019/10/16/test/" alt="微信分享二维码">
+      <img src="http://bshare.optimix.asia/barCode?site=weixin&url=http://lizenghua.github.io/2019/10/16/vue_axios/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -259,20 +321,6 @@
 </article>
 
   
-<nav id="article-nav">
-  
-    <a href="/2019/10/16/nihao/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          按三份三口
-        
-      </div>
-    </a>
-  
-  
-</nav>
-
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -414,11 +462,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">NodeJS</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">VueJs</a>
+                <a href="javascript:void(0)" class="js-tag color3">架构</a>
               </li>
             
             <div class="clearfix"></div>
