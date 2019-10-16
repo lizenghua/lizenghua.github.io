@@ -145,7 +145,15 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-nihao" class="article article-type-post " itemscope itemprop="blogPost">
+            <!--
+ * @message:
+ * @Author: lzh
+ * @since: 2019-10-16 16:07:30
+ * @lastTime: 2019-10-16 19:01:41
+ * @LastAuthor: Do not edit
+ * @copyright: lizenghua
+ -->
+<article id="post-nihao" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -234,11 +242,12 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://lizenghua.github.io/2019/10/16/nihao/" alt="微信分享二维码">
+      <img src="http://bshare.optimix.asia/barCode?site=weixinhttps://lizenghua.github.io/2019/10/16/nihao/" alt="微信分享二维码">
     </div>
 </div>
 
 <div class="mask js-mask"></div>
+
       
       <div class="clearfix"></div>
     </div>
@@ -276,7 +285,29 @@
 
 
   
+
   
+    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+      <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "nBmcTeFquEx7xFiUeSfdoxJJ-gzGzoHsz",
+            app_key: "0xja6r6XMcCet4U8qigB6ETz",
+            placeholder: "ヾﾉ≧∀≦)o 来呀！快活呀！~",
+            avatar:"mm"
+        });
+    }
+</script>
+
+    </section>
   
 
   
@@ -284,6 +315,9 @@
   
 
   
+
+  
+
 
 
           </div>
