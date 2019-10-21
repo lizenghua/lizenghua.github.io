@@ -154,6 +154,100 @@
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
+<article id="post-es6全部特性" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/21/es6全部特性/">ES6全部特性(转)</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/21/es6全部特性/" class="archive-article-date">
+  <time datetime="2019-10-21T03:09:43.685Z" itemprop="datePublished">
+    <i class="icon-calendar icon"></i>
+    
+    
+    今天
+    
+  </time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://user-gold-cdn.xitu.io/2019/10/8/16daaaaa5eef3fac?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="image"></p>
+<ul>
+<li>转自文章：</li>
+</ul>
+<p>​    <a href="https://juejin.im/post/5d9bf530518825427b27639d" target="_blank" rel="noopener">https://juejin.im/post/5d9bf530518825427b27639d</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/21/es6全部特性/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <!--
+ * @message:
+ * @Author: lzh
+ * @since: 2019-10-16 16:07:30
+ * @lastTime: 2019-10-16 19:01:41
+ * @LastAuthor: Do not edit
+ * @copyright: lizenghua
+ -->
 <article id="post-entires-map-reduce" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -171,7 +265,7 @@
     <i class="icon-calendar icon"></i>
     
     
-    今天
+    2019-10-16
     
   </time>
 </a>
@@ -271,7 +365,7 @@
     <i class="icon-calendar icon"></i>
     
     
-    今天
+    2019-10-16
     
   </time>
 </a>
@@ -375,7 +469,7 @@
     <i class="icon-calendar icon"></i>
     
     
-    今天
+    2019-10-16
     
   </time>
 </a>
@@ -385,7 +479,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一、扁平数据"><a href="#一、扁平数据" class="headerlink" title="一、扁平数据"></a>一、扁平数据</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">const data = &#123;</span><br><span class="line">    parent:[</span><br><span class="line">        &#123;</span><br><span class="line">            name: "文件1",</span><br><span class="line">            pid: 1,</span><br><span class="line">            id: 10001</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: "文件2",</span><br><span class="line">            pid: 1,</span><br><span class="line">            id: 10002</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: "文件2-1",</span><br><span class="line">            pid: 2,</span><br><span class="line">            id: 10003</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: "文件2-2",</span><br><span class="line">            pid: 2,</span><br><span class="line">            id: 10004</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: "文件1-1-1",</span><br><span class="line">            pid: 4,</span><br><span class="line">            id: 10005</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: "文件2-1-1",</span><br><span class="line">            pid: 5,</span><br><span class="line">            id: 10006</span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    child:[</span><br><span class="line">        &#123;</span><br><span class="line">            name: "文件夹1",</span><br><span class="line">            pid: 0,</span><br><span class="line">            id: 1</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: "文件夹2",</span><br><span class="line">            pid: 0,</span><br><span class="line">            id: 2</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: "文件夹3",</span><br><span class="line">            pid: 0,</span><br><span class="line">            id: 3</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: "文件夹1-1",</span><br><span class="line">            pid: 1,</span><br><span class="line">            id: 4</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: "文件夹2-1",</span><br><span class="line">            pid: 2,</span><br><span class="line">            id: 5</span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="一、扁平数据"><a href="#一、扁平数据" class="headerlink" title="一、扁平数据"></a>一、扁平数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data = &#123;</span><br><span class="line">    parent:[</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件1"</span>,</span><br><span class="line">            pid: <span class="number">1</span>,</span><br><span class="line">            id: <span class="number">10001</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件2"</span>,</span><br><span class="line">            pid: <span class="number">1</span>,</span><br><span class="line">            id: <span class="number">10002</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件2-1"</span>,</span><br><span class="line">            pid: <span class="number">2</span>,</span><br><span class="line">            id: <span class="number">10003</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件2-2"</span>,</span><br><span class="line">            pid: <span class="number">2</span>,</span><br><span class="line">            id: <span class="number">10004</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件1-1-1"</span>,</span><br><span class="line">            pid: <span class="number">4</span>,</span><br><span class="line">            id: <span class="number">10005</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件2-1-1"</span>,</span><br><span class="line">            pid: <span class="number">5</span>,</span><br><span class="line">            id: <span class="number">10006</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    child:[</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹1"</span>,</span><br><span class="line">            pid: <span class="number">0</span>,</span><br><span class="line">            id: <span class="number">1</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹2"</span>,</span><br><span class="line">            pid: <span class="number">0</span>,</span><br><span class="line">            id: <span class="number">2</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹3"</span>,</span><br><span class="line">            pid: <span class="number">0</span>,</span><br><span class="line">            id: <span class="number">3</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹1-1"</span>,</span><br><span class="line">            pid: <span class="number">1</span>,</span><br><span class="line">            id: <span class="number">4</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹2-1"</span>,</span><br><span class="line">            pid: <span class="number">2</span>,</span><br><span class="line">            id: <span class="number">5</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2019/10/16/es6_data/#more">more >></a>
         
@@ -471,7 +565,7 @@
     <i class="icon-calendar icon"></i>
     
     
-    今天
+    2019-10-16
     
   </time>
 </a>
@@ -481,14 +575,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-单行超出文本出现省略号"><a href="#1-单行超出文本出现省略号" class="headerlink" title="1. 单行超出文本出现省略号"></a>1. 单行超出文本出现省略号</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">white-space</span><span class="selector-pseudo">:nowrap</span>; </span><br><span class="line"><span class="selector-tag">text-overflow</span><span class="selector-pseudo">:ellipsis</span>; </span><br><span class="line"><span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>; </span><br><span class="line"><span class="selector-tag">word-break</span><span class="selector-pseudo">:break-all</span>;</span><br></pre></td></tr></table></figure>
+        <h3 id="1-单行超出文本出现省略号"><a href="#1-单行超出文本出现省略号" class="headerlink" title="1. 单行超出文本出现省略号"></a>1. 单行超出文本出现省略号</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.text</span>&#123;</span><br><span class="line">    <span class="attribute">white-space</span>:nowrap; </span><br><span class="line">    <span class="attribute">text-overflow</span>:ellipsis; </span><br><span class="line">    <span class="attribute">overflow</span>:hidden; </span><br><span class="line">    <span class="attribute">word-break</span>:break-all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-多行超出文本出现省略号"><a href="#2-多行超出文本出现省略号" class="headerlink" title="2. 多行超出文本出现省略号"></a>2. 多行超出文本出现省略号</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">display</span>: <span class="selector-tag">-webkit-box</span>;</span><br><span class="line">-webkit-box-orient:vertical; //检索伸缩盒对象的子元素的排列方式</span><br><span class="line">-webkit-line-clamp:3; //行数</span><br><span class="line"><span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>;</span><br><span class="line"><span class="selector-tag">word-break</span><span class="selector-pseudo">:break-all</span>; </span><br><span class="line"><span class="selector-tag">white-space</span><span class="selector-pseudo">:normal</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="2-多行超出文本出现省略号"><a href="#2-多行超出文本出现省略号" class="headerlink" title="2. 多行超出文本出现省略号"></a>2. 多行超出文本出现省略号</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.text</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    -webkit-box-orient:vertical; //检索伸缩盒对象的子元素的排列方式</span><br><span class="line">    -webkit-line-clamp:3; //行数</span><br><span class="line">    <span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>;</span><br><span class="line">    <span class="selector-tag">word-break</span><span class="selector-pseudo">:break-all</span>; </span><br><span class="line">    <span class="selector-tag">white-space</span><span class="selector-pseudo">:normal</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p>注意：这种方法适合于WebKit浏览器及移动端，对于IE浏览器兼容不好</p>
 </blockquote>
-<h3 id="3-背景透明，文字不透明"><a href="#3-背景透明，文字不透明" class="headerlink" title="3. 背景透明，文字不透明"></a>3. 背景透明，文字不透明</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">background</span><span class="selector-pseudo">:rgba(255</span>, 255, 255, 0<span class="selector-class">.75</span>)!<span class="selector-tag">important</span>;</span><br><span class="line">filter:Alpha(opacity=75);</span><br></pre></td></tr></table></figure>
+<h3 id="3-背景透明，文字不透明"><a href="#3-背景透明，文字不透明" class="headerlink" title="3. 背景透明，文字不透明"></a>3. 背景透明，文字不透明</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.text</span>&#123;</span><br><span class="line">    <span class="attribute">background</span>:<span class="built_in">rgba</span>(255, 255, 255, 0.75)<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">filter</span>:<span class="built_in">Alpha</span>(opacity=75); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2019/10/16/css/#more">more >></a>
         
@@ -570,7 +664,7 @@
     <i class="icon-calendar icon"></i>
     
     
-    今天
+    2019-10-16
     
   </time>
 </a>
