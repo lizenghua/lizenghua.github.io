@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//lizenghua.github.io">
-  <title>Archives: 2019 | 欢迎来到李增华的博客</title>
+  <title>欢迎来到李增华的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="李增华的博客">
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 <meta name="keywords" content="李增华,博客,前端,js,jquery,javascript,html5,开发者,程序猿,程序媛,编程,代码,开源,IT网站,html,css,css3,node,vue,element-ui">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:title" content="欢迎来到李增华的博客">
-<meta property="og:url" content="//lizenghua.github.io/archives/2019/index.html">
+<meta property="og:url" content="//lizenghua.github.io/2019/10/28/scss工具/index.html">
 <meta property="og:site_name" content="欢迎来到李增华的博客">
-<meta property="og:description" content="李增华的博客">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-28T07:05:17.862Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="欢迎来到李增华的博客">
-<meta name="twitter:description" content="李增华的博客">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010110210">
   
     <link rel="alternative" href="/atom.xml" title="欢迎来到李增华的博客" type="application/atom+xml">
   
@@ -144,332 +145,155 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <!--
+ * @message:
+ * @Author: lzh
+ * @since: 2019-10-16 16:07:30
+ * @lastTime: 2019-10-16 19:01:41
+ * @LastAuthor: Do not edit
+ * @copyright: lizenghua
+ -->
+<article id="post-scss工具" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// text align</span></span><br><span class="line">@<span class="keyword">each</span> <span class="variable">$var</span> in (left,center,right) &#123;</span><br><span class="line">    <span class="selector-class">.text-</span>#&#123;<span class="variable">$var</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">text-align</span>: <span class="variable">$var</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// colors</span></span><br><span class="line"><span class="variable">$colors</span>: (</span><br><span class="line">    <span class="string">"primary"</span>: <span class="number">#db9e3f</span>,</span><br><span class="line">    <span class="string">"white"</span>: <span class="number">#fff</span>,</span><br><span class="line">    <span class="string">"light"</span>: <span class="number">#f9f9f9</span>,</span><br><span class="line">    <span class="string">"grey"</span>: <span class="number">#999</span>,</span><br><span class="line">    <span class="string">"dark"</span>: <span class="number">#212222</span>,</span><br><span class="line">    <span class="string">"dark-1"</span>: <span class="number">#333</span>,</span><br><span class="line">    <span class="string">"black"</span>: <span class="number">#000</span></span><br><span class="line">);</span><br><span class="line">@<span class="keyword">each</span> <span class="variable">$colorKey</span>, <span class="variable">$color</span> in <span class="variable">$colors</span> &#123;</span><br><span class="line">    <span class="selector-class">.text-</span>#&#123;<span class="variable">$colorKey</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">color</span>: <span class="variable">$color</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.bg-</span>#&#123;<span class="variable">$colorKey</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: <span class="variable">$color</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// font size</span></span><br><span class="line"><span class="variable">$base-font-size</span>: <span class="number">13px</span>;</span><br><span class="line"><span class="variable">$font-sizes</span>: (</span><br><span class="line">    <span class="string">"xs"</span>: <span class="number">0.7692</span>, //<span class="number">10px</span></span><br><span class="line">    <span class="string">"sm"</span>: <span class="number">0.9231</span>, //<span class="number">12px</span></span><br><span class="line">    <span class="string">"md"</span>: <span class="number">1</span>,      //<span class="number">13px</span></span><br><span class="line">    <span class="string">"lg"</span>: <span class="number">1.0769</span>, //<span class="number">14px</span></span><br><span class="line">    <span class="string">"xl"</span>: <span class="number">1.2308</span>  //<span class="number">16px</span></span><br><span class="line">);</span><br><span class="line">@<span class="keyword">each</span> <span class="variable">$sizeKey</span>, <span class="variable">$size</span> in <span class="variable">$font-sizes</span> &#123;</span><br><span class="line">    <span class="selector-class">.fs-</span>#&#123;<span class="variable">$sizeKey</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">font-size</span>: <span class="variable">$size</span> * <span class="variable">$base-font-size</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// flex</span></span><br><span class="line"><span class="selector-class">.d-flex</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.flex-column</span> &#123;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$flex-jc</span>: ( </span><br><span class="line">    <span class="string">"start"</span>: flex-start, </span><br><span class="line">    <span class="string">"end"</span>: flex-end, </span><br><span class="line">    <span class="string">"center"</span>: center, </span><br><span class="line">    <span class="string">"between"</span>: space-between, </span><br><span class="line">    <span class="string">"around"</span>: space-around</span><br><span class="line">);</span><br><span class="line">@<span class="keyword">each</span> <span class="variable">$key</span>,</span><br><span class="line"><span class="variable">$value</span> in <span class="variable">$flex-jc</span> &#123;</span><br><span class="line">    <span class="selector-class">.jc-</span>#&#123;<span class="variable">$key</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">justify-content</span>: <span class="variable">$value</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$flex-ai</span>: ( </span><br><span class="line">    <span class="string">"start"</span>: flex-start, </span><br><span class="line">    <span class="string">"end"</span>: flex-end, </span><br><span class="line">    <span class="string">"center"</span>: center, </span><br><span class="line">    <span class="string">"stretch"</span>: stretch</span><br><span class="line">);</span><br><span class="line">@<span class="keyword">each</span> <span class="variable">$key</span>,</span><br><span class="line"><span class="variable">$value</span> in <span class="variable">$flex-ai</span> &#123;</span><br><span class="line">    <span class="selector-class">.ai-</span>#&#123;<span class="variable">$key</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">align-items</span>: <span class="variable">$value</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.flex-1</span> &#123;</span><br><span class="line">    <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.flex-grow-1</span> &#123;</span><br><span class="line">    <span class="attribute">flex-grow</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// spacing</span></span><br><span class="line"><span class="comment">// 0-5 等级</span></span><br><span class="line"><span class="comment">// .mt-1 =&gt; margin-top  .pt-1 =&gt; padding-top</span></span><br><span class="line"><span class="variable">$spacing-types</span>: (</span><br><span class="line">    m: margin, </span><br><span class="line">    p: padding</span><br><span class="line">);</span><br><span class="line"><span class="variable">$spacing-directions</span>: (</span><br><span class="line">    t: top, </span><br><span class="line">    b: bottom, </span><br><span class="line">    l: left, </span><br><span class="line">    r: right</span><br><span class="line">);</span><br><span class="line"><span class="variable">$spacing-base-size</span>: <span class="number">1rem</span>;</span><br><span class="line"><span class="variable">$spacing-sizes</span>: ( </span><br><span class="line">    <span class="number">0</span>: <span class="number">0</span>, </span><br><span class="line">    <span class="number">1</span>: <span class="number">0.25</span>, </span><br><span class="line">    <span class="number">2</span>: <span class="number">0.5</span>, </span><br><span class="line">    <span class="number">3</span>: <span class="number">1</span>, </span><br><span class="line">    <span class="number">4</span>: <span class="number">1.5</span>, </span><br><span class="line">    <span class="number">5</span>: <span class="number">3</span></span><br><span class="line">);</span><br><span class="line">@<span class="keyword">each</span> <span class="variable">$typeKey</span>, <span class="variable">$type</span> in <span class="variable">$spacing-types</span> &#123;</span><br><span class="line">    @<span class="keyword">each</span> <span class="variable">$directionKey</span>, <span class="variable">$direction</span> in <span class="variable">$spacing-directions</span> &#123;</span><br><span class="line">        @<span class="keyword">each</span> <span class="variable">$sizeKey</span>, <span class="variable">$size</span> in <span class="variable">$spacing-sizes</span> &#123;</span><br><span class="line">            <span class="comment">// .mt-1&#123;margin-top:0.25rem&#125;</span></span><br><span class="line">            .#&#123;<span class="variable">$typeKey</span>&#125;#&#123;<span class="variable">$directionKey</span>&#125;-#&#123;<span class="variable">$sizeKey</span>&#125;&#123;</span><br><span class="line">                #&#123;<span class="variable">$type</span>&#125;-#&#123;<span class="variable">$direction</span>&#125;: <span class="variable">$size</span> * <span class="variable">$spacing-base-size</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/28/scss工具/" class="archive-article-date">
-  <time datetime="2019-10-28T07:02:34.169Z" itemprop="datePublished">
-    <i class="icon-calendar icon"></i>
-    
-    
-    今天
-    
-  </time>
-</a>
+      
 
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </!-->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <!-- <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a> -->
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <!-- <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a> -->
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://bshare.optimix.asia/barCode?site=weixin&url=http://lizenghua.github.io/2019/10/28/scss工具/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/21/es6全部特性/" class="archive-article-date">
-  <time datetime="2019-10-21T03:09:43.685Z" itemprop="datePublished">
-    <i class="icon-calendar icon"></i>
-    
-    
-    2019-10-21
-    
-  </time>
-</a>
 
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/21/es6全部特性/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6全部特性(转)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/21/es6全部特性/">ES6全部特性(转)</a>
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/16/entires-map-reduce/" class="archive-article-date">
-  <time datetime="2019-10-16T12:21:38.616Z" itemprop="datePublished">
-    <i class="icon-calendar icon"></i>
-    
-    
-    2019-10-16
-    
-  </time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/16/entires-map-reduce/">对象转指定的数组对象（entires-map-reduce）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/16/es6_reduce/" class="archive-article-date">
-  <time datetime="2019-10-16T12:18:00.654Z" itemprop="datePublished">
-    <i class="icon-calendar icon"></i>
-    
-    
-    2019-10-16
-    
-  </time>
-</a>
+    <section id="comments" style="margin:10px;padding:10px;background:#fff;">
+      <div id="vcomment" class="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+    window.onload = function() {
+        new Valine({
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "nBmcTeFquEx7xFiUeSfdoxJJ-gzGzoHsz",
+            app_key: "0xja6r6XMcCet4U8qigB6ETz",
+            placeholder: "ヾﾉ≧∀≦)o 来呀！快活呀！~",
+            avatar:"mm"
+        });
+    }
+</script>
 
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/16/es6_reduce/">reduce 使用</a>
-    </h1>
+    </section>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/16/es6_data/" class="archive-article-date">
-  <time datetime="2019-10-16T12:14:51.653Z" itemprop="datePublished">
-    <i class="icon-calendar icon"></i>
-    
-    
-    2019-10-16
-    
-  </time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/16/es6_data/">将扁平化的数据转化为多维数组</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/16/css/" class="archive-article-date">
-  <time datetime="2019-10-16T12:10:11.915Z" itemprop="datePublished">
-    <i class="icon-calendar icon"></i>
-    
-    
-    2019-10-16
-    
-  </time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/16/css/">常用css系列（持续更新···）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/16/vue_axios/" class="archive-article-date">
-  <time datetime="2019-10-16T11:32:37.432Z" itemprop="datePublished">
-    <i class="icon-calendar icon"></i>
-    
-    
-    2019-10-16
-    
-  </time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/16/vue_axios/">vue-axios封装和api接口管理</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">架构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
 
 
           </div>
@@ -492,8 +316,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
