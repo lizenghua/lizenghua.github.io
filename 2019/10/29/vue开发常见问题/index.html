@@ -6,23 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="//lizenghua.github.io">
-  <title>将扁平化的数据转化为多维数组 | 欢迎来到李增华的博客</title>
+  <title>vue 开发中常见问题 | 欢迎来到李增华的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、扁平数据12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061const data = &amp;#123;    parent:[        &amp;#123;            name: &quot;文件1&quot;,">
-<meta name="keywords" content="es6,算法">
+  <meta name="description" content="项目路由出现message: “Navigating to current location (XXX) is not allowed”的问题  出现场景：当多次点击相同路由时  原因：在路由中添加了相同的路由。  解决：重写路由的push方法 123456789101112131415161718192021// src/router/index.jsimport Vue from &quot;vue&quot;;">
+<meta name="keywords" content="vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="将扁平化的数据转化为多维数组">
-<meta property="og:url" content="//lizenghua.github.io/2019/10/16/es6_data/index.html">
+<meta property="og:title" content="vue 开发中常见问题">
+<meta property="og:url" content="//lizenghua.github.io/2019/10/29/vue开发常见问题/index.html">
 <meta property="og:site_name" content="欢迎来到李增华的博客">
-<meta property="og:description" content="一、扁平数据12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061const data = &amp;#123;    parent:[        &amp;#123;            name: &quot;文件1&quot;,">
+<meta property="og:description" content="项目路由出现message: “Navigating to current location (XXX) is not allowed”的问题  出现场景：当多次点击相同路由时  原因：在路由中添加了相同的路由。  解决：重写路由的push方法 123456789101112131415161718192021// src/router/index.jsimport Vue from &quot;vue&quot;;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/10/9/16daf99e3a85194d?w=492&h=120&f=png&s=9905">
-<meta property="og:image" content="https://user-gold-cdn.xitu.io/2019/10/9/16daf9ae43e561b2?w=510&h=654&f=png&s=46801">
-<meta property="og:updated_time" content="2019-10-21T02:53:13.947Z">
+<meta property="og:updated_time" content="2019-10-29T12:22:28.871Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="将扁平化的数据转化为多维数组">
-<meta name="twitter:description" content="一、扁平数据12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061const data = &amp;#123;    parent:[        &amp;#123;            name: &quot;文件1&quot;,">
-<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2019/10/9/16daf99e3a85194d?w=492&h=120&f=png&s=9905">
+<meta name="twitter:title" content="vue 开发中常见问题">
+<meta name="twitter:description" content="项目路由出现message: “Navigating to current location (XXX) is not allowed”的问题  出现场景：当多次点击相同路由时  原因：在路由中添加了相同的路由。  解决：重写路由的push方法 123456789101112131415161718192021// src/router/index.jsimport Vue from &quot;vue&quot;;">
   
     <link rel="alternative" href="/atom.xml" title="欢迎来到李增华的博客" type="application/atom+xml">
   
@@ -156,24 +153,24 @@
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
-<article id="post-es6_data" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-vue开发常见问题" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      将扁平化的数据转化为多维数组
+      vue 开发中常见问题
     </h1>
   
 
         
-        <a href="/2019/10/16/es6_data/" class="archive-article-date">
-  <time datetime="2019-10-16T12:14:51.653Z" itemprop="datePublished">
+        <a href="/2019/10/29/vue开发常见问题/" class="archive-article-date">
+  <time datetime="2019-10-29T12:14:19.589Z" itemprop="datePublished">
     <i class="icon-calendar icon"></i>
     
     
-    2019-10-16
+    今天
     
   </time>
 </a>
@@ -183,14 +180,38 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="一、扁平数据"><a href="#一、扁平数据" class="headerlink" title="一、扁平数据"></a>一、扁平数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data = &#123;</span><br><span class="line">    parent:[</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件1"</span>,</span><br><span class="line">            pid: <span class="number">1</span>,</span><br><span class="line">            id: <span class="number">10001</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件2"</span>,</span><br><span class="line">            pid: <span class="number">1</span>,</span><br><span class="line">            id: <span class="number">10002</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件2-1"</span>,</span><br><span class="line">            pid: <span class="number">2</span>,</span><br><span class="line">            id: <span class="number">10003</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件2-2"</span>,</span><br><span class="line">            pid: <span class="number">2</span>,</span><br><span class="line">            id: <span class="number">10004</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件1-1-1"</span>,</span><br><span class="line">            pid: <span class="number">4</span>,</span><br><span class="line">            id: <span class="number">10005</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件2-1-1"</span>,</span><br><span class="line">            pid: <span class="number">5</span>,</span><br><span class="line">            id: <span class="number">10006</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    child:[</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹1"</span>,</span><br><span class="line">            pid: <span class="number">0</span>,</span><br><span class="line">            id: <span class="number">1</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹2"</span>,</span><br><span class="line">            pid: <span class="number">0</span>,</span><br><span class="line">            id: <span class="number">2</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹3"</span>,</span><br><span class="line">            pid: <span class="number">0</span>,</span><br><span class="line">            id: <span class="number">3</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹1-1"</span>,</span><br><span class="line">            pid: <span class="number">1</span>,</span><br><span class="line">            id: <span class="number">4</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹2-1"</span>,</span><br><span class="line">            pid: <span class="number">2</span>,</span><br><span class="line">            id: <span class="number">5</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h3 id="项目路由出现message-“Navigating-to-current-location-XXX-is-not-allowed”的问题"><a href="#项目路由出现message-“Navigating-to-current-location-XXX-is-not-allowed”的问题" class="headerlink" title="项目路由出现message: “Navigating to current location (XXX) is not allowed”的问题"></a>项目路由出现message: “Navigating to current location (XXX) is not allowed”的问题</h3><hr>
+<ul>
+<li><p>出现场景：当多次点击相同路由时</p>
+</li>
+<li><p>原因：在路由中添加了相同的路由。</p>
+</li>
+<li><p>解决：重写路由的push方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/router/index.js</span></span><br><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">"vue"</span>;</span><br><span class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">"vue-router"</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; routes &#125; <span class="keyword">from</span> <span class="string">"./routerConfig"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 重写路由的push方法</span></span><br><span class="line"><span class="comment"> * 解决：在路由中点击了相同的路由（会报不允许vue导航到当前位置）的错误</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> routerPush = VueRouter.prototype.push;</span><br><span class="line">VueRouter.prototype.push = <span class="function"><span class="keyword">function</span> <span class="title">push</span>(<span class="params">location</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> routerPush.call(<span class="keyword">this</span>, location).catch(<span class="function"><span class="params">error</span> =&gt;</span> error);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  routes</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> router;</span><br></pre></td></tr></table></figure>
 
+</li>
+</ul>
 <a id="more"></a>
 
-<h3 id="二、转为多维数组"><a href="#二、转为多维数组" class="headerlink" title="二、转为多维数组"></a>二、转为多维数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//1. 将所有的数据混合在一起</span></span><br><span class="line"><span class="keyword">let</span> allData = [...data.parent, ...data.child];</span><br><span class="line"><span class="comment">//2. 生成一个映射表（将id抽取出来，以对象的键值对形式展示）</span></span><br><span class="line"><span class="comment">//&#123;1:&#123;name: "文件夹1", pid: 0, id: 1&#125;&#125;</span></span><br><span class="line"><span class="keyword">let</span> treeMapList = allData.reduce(<span class="function">(<span class="params">obj,cur</span>)=&gt;</span>&#123;</span><br><span class="line">	obj[cur[<span class="string">"id"</span>]] = cur;</span><br><span class="line">	<span class="keyword">return</span> obj;</span><br><span class="line">&#125;,&#123;&#125;);</span><br><span class="line"><span class="comment">//3. 生成一个新的数组，根据pid在映射表中寻找并判断，相应的生成多层数组</span></span><br><span class="line"><span class="keyword">let</span> result = allData.reduce(<span class="function">(<span class="params">arr,cur</span>)=&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> pid = cur.pid;</span><br><span class="line">    <span class="keyword">let</span> parent = treeMapList[pid];</span><br><span class="line">    <span class="keyword">if</span>(parent)&#123;</span><br><span class="line">        parent.children ? parent.children.push(cur) : parent.children = [cur];</span><br><span class="line">    &#125;<span class="keyword">else</span> <span class="keyword">if</span>(pid === <span class="number">0</span>)&#123; <span class="comment">//这是根文件夹</span></span><br><span class="line">        arr.push(cur);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> arr;</span><br><span class="line">&#125;,[]);</span><br><span class="line"><span class="built_in">console</span>.log(result);</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://user-gold-cdn.xitu.io/2019/10/9/16daf99e3a85194d?w=492&h=120&f=png&s=9905" alt></p>
-<p><img src="https://user-gold-cdn.xitu.io/2019/10/9/16daf9ae43e561b2?w=510&h=654&f=png&s=46801" alt></p>
+<h3 id="img的src属性绑定问题"><a href="#img的src属性绑定问题" class="headerlink" title="img的src属性绑定问题"></a>img的src属性绑定问题</h3><hr>
+<ul>
+<li>出现场景：将img的src地址使用data(){return {}}的方式进行属性绑定，会出现图片加载不出来404</li>
+<li>原因：<ul>
+<li>分析vuecli的<code>assets</code>和<code>static</code>文件夹的区别：<ul>
+<li><code>assets</code> ：编译时会被 webpack 处理，解析为模块依赖，只支持相对路径</li>
+<li><code>static</code> ：编译时不会被 webpack 处理，会直接被复制到最终的打包目录(默认是dist/static)下，这是通过config.js文件中的build.assetsPublic和build.assertsSubDirectory链接来确定的。任何放在static/中文件需要以<strong>绝对路径的形式引用：/static[filename]</strong> </li>
+</ul>
+</li>
+<li>在webpack中会将图片当做模块来用，因为是动态加载的，所以url-loader将无法解析图片地址，然后npm run dev 或者npm run build之后导致路径没有被加工【被webpack解析到的路径都会被解析为/static/img/[filename].png，完整地址为localhost:8080/static/img/[filename].png】</li>
+</ul>
+</li>
+<li>解决：<ul>
+<li>将图片作为模块加载进去，比如<strong>images:[{src:require(‘./1.png’)},{src:require(‘./2.png’)}]</strong></li>
+<li>将图片放到static目录下，但必须写成绝对路径如<strong>images:[{src:’/static/1.png’},{src:’/static/2.png’}]</strong></li>
+<li>把图片放在cdn上，把网络地址存在imgUrl里，然后直接<img :src="imgUrl">去展示</li>
+</ul>
+</li>
+</ul>
 
       
 
@@ -204,11 +225,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue</a>
         		</li>
       		
 		</ul>
@@ -264,7 +281,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://bshare.optimix.asia/barCode?site=weixin&url=http://lizenghua.github.io/2019/10/16/es6_data/" alt="微信分享二维码">
+      <img src="http://bshare.optimix.asia/barCode?site=weixin&url=http://lizenghua.github.io/2019/10/29/vue开发常见问题/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -279,18 +296,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/16/es6_reduce/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/10/29/express/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          reduce 使用
+          express 个人项目中的express开发笔记
         
       </div>
     </a>
   
   
-    <a href="/2019/10/16/css/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">常用css系列（持续更新···）</div>
+    <a href="/2019/10/28/scss工具/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">scss 个人项目中的工具库</div>
       <i class="icon-circle-right"></i>
     </a>
   
