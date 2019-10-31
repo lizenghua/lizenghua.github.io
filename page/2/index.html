@@ -154,6 +154,105 @@
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
+<article id="post-css" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/16/css/">常用css系列（持续更新···）</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/16/css/" class="archive-article-date">
+  <time datetime="2019-10-16T12:10:11.915Z" itemprop="datePublished">
+    <i class="icon-calendar icon"></i>
+    
+    
+    2019-10-16
+    
+  </time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-单行超出文本出现省略号"><a href="#1-单行超出文本出现省略号" class="headerlink" title="1. 单行超出文本出现省略号"></a>1. 单行超出文本出现省略号</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.text</span>&#123;</span><br><span class="line">    <span class="attribute">white-space</span>:nowrap; </span><br><span class="line">    <span class="attribute">text-overflow</span>:ellipsis; </span><br><span class="line">    <span class="attribute">overflow</span>:hidden; </span><br><span class="line">    <span class="attribute">word-break</span>:break-all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-多行超出文本出现省略号"><a href="#2-多行超出文本出现省略号" class="headerlink" title="2. 多行超出文本出现省略号"></a>2. 多行超出文本出现省略号</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.text</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: -webkit-box;</span><br><span class="line">    -webkit-box-orient:vertical; //检索伸缩盒对象的子元素的排列方式</span><br><span class="line">    -webkit-line-clamp:3; //行数</span><br><span class="line">    <span class="selector-tag">overflow</span><span class="selector-pseudo">:hidden</span>;</span><br><span class="line">    <span class="selector-tag">word-break</span><span class="selector-pseudo">:break-all</span>; </span><br><span class="line">    <span class="selector-tag">white-space</span><span class="selector-pseudo">:normal</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：这种方法适合于WebKit浏览器及移动端，对于IE浏览器兼容不好</p>
+</blockquote>
+<h3 id="3-背景透明，文字不透明"><a href="#3-背景透明，文字不透明" class="headerlink" title="3. 背景透明，文字不透明"></a>3. 背景透明，文字不透明</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.text</span>&#123;</span><br><span class="line">    <span class="attribute">background</span>:<span class="built_in">rgba</span>(255, 255, 255, 0.75)<span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">filter</span>:<span class="built_in">Alpha</span>(opacity=75); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2019/10/16/css/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/16/css/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <!--
+ * @message:
+ * @Author: lzh
+ * @since: 2019-10-16 16:07:30
+ * @lastTime: 2019-10-16 19:01:41
+ * @LastAuthor: Do not edit
+ * @copyright: lizenghua
+ -->
 <article id="post-vue_axios" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -343,10 +442,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
@@ -355,7 +450,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
