@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="欢迎来到李增华的博客">
 <meta property="og:description" content="项目路由出现message: “Navigating to current location (XXX) is not allowed”的问题  出现场景：当多次点击相同路由时  原因：在路由中添加了相同的路由。  解决：重写路由的push方法 123456789101112131415161718192021// src/router/index.jsimport Vue from &quot;vue&quot;;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-29T12:22:28.871Z">
+<meta property="og:updated_time" content="2019-10-31T08:35:07.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue 开发中常见问题">
 <meta name="twitter:description" content="项目路由出现message: “Navigating to current location (XXX) is not allowed”的问题  出现场景：当多次点击相同路由时  原因：在路由中添加了相同的路由。  解决：重写路由的push方法 123456789101112131415161718192021// src/router/index.jsimport Vue from &quot;vue&quot;;">
@@ -170,7 +170,7 @@
     <i class="icon-calendar icon"></i>
     
     
-    今天
+    2019-10-29
     
   </time>
 </a>
@@ -211,6 +211,64 @@
 <li>把图片放在cdn上，把网络地址存在imgUrl里，然后直接<img :src="imgUrl">去展示</li>
 </ul>
 </li>
+</ul>
+<h3 id="在混合APP开发中，ios端，input触发焦点后，键盘抬起不灵敏-缓慢"><a href="#在混合APP开发中，ios端，input触发焦点后，键盘抬起不灵敏-缓慢" class="headerlink" title="在混合APP开发中，ios端，input触发焦点后，键盘抬起不灵敏/缓慢"></a>在混合APP开发中，ios端，input触发焦点后，键盘抬起不灵敏/缓慢</h3><hr>
+<ul>
+<li><p>出现场景：在SDK打包后，在ios端发现，点击输入框，触发不灵敏，甚至有时候不触发，而且键盘抬起缓慢</p>
+</li>
+<li><p>原因：是由于<code>fastclick</code>插件引起的</p>
+</li>
+<li><p>解决：</p>
+<p>在node_module里找到fastClick文件，然后找到focus方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  * @param &#123;EventTarget|Element&#125; targetElement</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">FastClick.prototype.focus = <span class="function"><span class="keyword">function</span>(<span class="params">targetElement</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> length;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Issue #160: on iOS 7, some input elements (e.g. date datetime month) throw a vague TypeError on setSelectionRange. These elements don't have an integer value for the selectionStart and selectionEnd properties, but unfortunately that can't be used for detection because accessing the properties also throws a TypeError. Just check the type instead. Filed as Apple bug #15122724.</span></span><br><span class="line">    <span class="keyword">if</span> (deviceIsIOS &amp;&amp; targetElement.setSelectionRange &amp;&amp; targetElement.type.indexOf(<span class="string">'date'</span>) !== <span class="number">0</span> &amp;&amp; targetElement.type !== <span class="string">'time'</span> &amp;&amp; targetElement.type !== <span class="string">'month'</span> &amp;&amp; targetElement.type !== <span class="string">'email'</span>) &#123;</span><br><span class="line">        length = targetElement.value.length;</span><br><span class="line">        targetElement.focus();<span class="comment">//加入这一句话就OK了</span></span><br><span class="line">        targetElement.setSelectionRange(length, length);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        targetElement.focus();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h3 id="在项目中使用better-scroll的踩坑记"><a href="#在项目中使用better-scroll的踩坑记" class="headerlink" title="在项目中使用better-scroll的踩坑记"></a>在项目中使用better-scroll的踩坑记</h3><hr>
+<blockquote>
+<p>PC端没必要引入<strong>better-scroll</strong>！旧项目由于考虑要兼容移动端才引入，没想到一堆bug。如果引入，<strong>做兼容：</strong>在移动端时使用这个插件，而在PC端，调用<strong>destory</strong> 方法销毁<strong>BScroll</strong>，使用原生</p>
+</blockquote>
+<h3 id="1、页面不能点击问题"><a href="#1、页面不能点击问题" class="headerlink" title="1、页面不能点击问题"></a>1、页面不能点击问题</h3><ul>
+<li><p>原因：better-scroll 默认会阻止浏览器原生的 click 事件</p>
+</li>
+<li><p>解决：在创建 BScroll 实例时 传入配置</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> options = &#123;</span><br><span class="line">    click: <span class="literal">true</span>,</span><br><span class="line">    taps: <span class="literal">true</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">this</span>.scroll = <span class="keyword">new</span> BScroll(<span class="keyword">this</span>.$refs.wrapper,options)</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2、在PC端，无法响应鼠标滚轮滚动"><a href="#2、在PC端，无法响应鼠标滚轮滚动" class="headerlink" title="2、在PC端，无法响应鼠标滚轮滚动"></a>2、在PC端，无法响应鼠标滚轮滚动</h3><ul>
+<li><p>解决：在配置选项中添加  <strong>mouseWheel:true</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> options = &#123;</span><br><span class="line">    click: <span class="literal">true</span>,</span><br><span class="line">    bounce: <span class="literal">false</span>,</span><br><span class="line">    scrollbar: <span class="literal">true</span>,</span><br><span class="line">    preventDefault: <span class="literal">false</span>,</span><br><span class="line">    tap: <span class="literal">true</span>,</span><br><span class="line">    mouseWheel: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="3、scrollBehavior-与-better-scroll-不兼容"><a href="#3、scrollBehavior-与-better-scroll-不兼容" class="headerlink" title="3、scrollBehavior 与 better-scroll 不兼容"></a>3、scrollBehavior 与 better-scroll 不兼容</h3><ul>
+<li><p>出现场景/原因： vue 的 <strong>scrollBehavior ** 可用于配置路由，比如：滚动到锚点；如果这个锚点是在 BScroll 容器中，</strong>scrollBehavior ** 就会失效</p>
+</li>
+<li><p>解决：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mounted() &#123; <span class="comment">// 模拟scrollBehavior</span></span><br><span class="line">    <span class="keyword">const</span> hash = <span class="keyword">this</span>.$route.hash;</span><br><span class="line">    setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123; <span class="comment">// 虽然父组件先于子组件创建，但是contentScroll是在nextTick中赋值的</span></span><br><span class="line">        <span class="keyword">const</span> contentScroll = <span class="keyword">this</span>.$parent.contentScroll;</span><br><span class="line">        <span class="keyword">if</span> (contentScroll) &#123;</span><br><span class="line">            <span class="keyword">if</span> (hash) &#123;</span><br><span class="line">                contentScroll.scrollToElement(hash);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                contentScroll.scrollTo(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="4、点击一次多次触发"><a href="#4、点击一次多次触发" class="headerlink" title="4、点击一次多次触发"></a>4、点击一次多次触发</h3><ul>
+<li>场景： 当我们在配置中传入 <strong>click:true</strong> ，点击 BScroll 容器的元素时，会触发两次甚至多次 click 事件；这个问题在 *<em>iscroll *</em>中也存在</li>
+<li>解决：引入 <strong>fastclick</strong> 插件</li>
+</ul>
+<h3 id="5、容器需要固定高度"><a href="#5、容器需要固定高度" class="headerlink" title="5、容器需要固定高度"></a>5、容器需要固定高度</h3><ul>
+<li><p>原因：如果高度是百分比，以适应容器父元素的高度变化。但是如果父元素也没有高度呢？大家都知道，父元素没高度时，子元素<code>height: 100%</code>是无效的。我父元素要flex: 1自适应，这也是没有高度的，父元素设置<code>height: 100%</code>也是无效的。</p>
+</li>
+<li><p>解决： </p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">position</span>: <span class="selector-tag">absolute</span>;</span><br><span class="line"><span class="selector-tag">height</span>: 100%;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h3 id="6、双层嵌套问题"><a href="#6、双层嵌套问题" class="headerlink" title="6、双层嵌套问题"></a>6、双层嵌套问题</h3><ul>
+<li>原因：双层嵌套使用了stopPropagation: true，但是里面的滚动如果滚到底或者滚到顶部，触发不了最外层的滚动。</li>
+<li>解决：内层滚动到底或者滚到顶部时，内层调用disable进行禁止，然后外层调用enable启用</li>
 </ul>
 
       
@@ -466,7 +524,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">express</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -474,7 +532,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
+                <a href="javascript:void(0)" class="js-tag color3">express</a>
               </li>
              
               <li class="article-tag-list-item">
