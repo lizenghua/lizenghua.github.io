@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="//lizenghua.github.io">
   <title>webpack 优化 | 欢迎来到李增华的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="文件路径优化 在Webpack中我们配置了resolve.extension之后可以不用在require或import的时候加文件扩展名，Webpack会依次尝试添加扩展名进行匹配。在resolve中还可以通过alias来配置别名，可以加快Webpack查找模块的速度。   webpack.common.js配置： 123456789// webpack.common.js alias: &amp;#12">
+  <meta name="description" content="文件路径优化 在Webpack中我们配置了resolve.extension之后可以不用在require或import的时候加文件扩展名，Webpack会依次尝试添加扩展名进行匹配。在resolve中还可以通过alias来配置别名，可以加快Webpack查找模块的速度。   webpack.common.js配置：123456789// webpack.common.js alias: &amp;#123">
 <meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack 优化">
 <meta property="og:url" content="//lizenghua.github.io/2019/10/31/webpack性能优化/index.html">
 <meta property="og:site_name" content="欢迎来到李增华的博客">
-<meta property="og:description" content="文件路径优化 在Webpack中我们配置了resolve.extension之后可以不用在require或import的时候加文件扩展名，Webpack会依次尝试添加扩展名进行匹配。在resolve中还可以通过alias来配置别名，可以加快Webpack查找模块的速度。   webpack.common.js配置： 123456789// webpack.common.js alias: &amp;#12">
+<meta property="og:description" content="文件路径优化 在Webpack中我们配置了resolve.extension之后可以不用在require或import的时候加文件扩展名，Webpack会依次尝试添加扩展名进行匹配。在resolve中还可以通过alias来配置别名，可以加快Webpack查找模块的速度。   webpack.common.js配置：123456789// webpack.common.js alias: &amp;#123">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-31T09:33:04.096Z">
+<meta property="og:updated_time" content="2019-10-31T09:34:03.001Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack 优化">
-<meta name="twitter:description" content="文件路径优化 在Webpack中我们配置了resolve.extension之后可以不用在require或import的时候加文件扩展名，Webpack会依次尝试添加扩展名进行匹配。在resolve中还可以通过alias来配置别名，可以加快Webpack查找模块的速度。   webpack.common.js配置： 123456789// webpack.common.js alias: &amp;#12">
+<meta name="twitter:description" content="文件路径优化 在Webpack中我们配置了resolve.extension之后可以不用在require或import的时候加文件扩展名，Webpack会依次尝试添加扩展名进行匹配。在resolve中还可以通过alias来配置别名，可以加快Webpack查找模块的速度。   webpack.common.js配置：123456789// webpack.common.js alias: &amp;#123">
   
     <link rel="alternative" href="/atom.xml" title="欢迎来到李增华的博客" type="application/atom+xml">
   
@@ -184,9 +184,13 @@
 <p>在Webpack中我们配置了<code>resolve.extension</code>之后可以不用在<code>require</code>或<code>import</code>的时候加文件扩展名，Webpack会依次尝试添加扩展名进行匹配。<br><br>在<code>resolve</code>中还可以通过<code>alias</code>来配置别名，可以加快Webpack查找模块的速度。</p>
 </blockquote>
 <ul>
-<li><p><code>webpack.common.js</code>配置：</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// webpack.common.js </span><br><span class="line"><span class="keyword">alias</span>: &#123; </span><br><span class="line">    <span class="string">'@'</span>: <span class="type">path</span>.resolve(__dirname, <span class="string">'../src'</span>), </span><br><span class="line">    <span class="string">'@components'</span>: <span class="type">path</span>.resolve(__dirname, <span class="string">'../src/components'</span>), </span><br><span class="line">    <span class="string">'@pages'</span>: <span class="type">path</span>.resolve(__dirname, <span class="string">'../src/pages'</span>), </span><br><span class="line">    <span class="string">'@images'</span>: <span class="type">path</span>.resolve(__dirname, <span class="string">'../src/assets/images'</span>), </span><br><span class="line">    <span class="string">'@fonts'</span>: <span class="type">path</span>.resolve(__dirname, <span class="string">'../src/assets/fonts'</span>), </span><br><span class="line">    <span class="string">'@icons'</span>: <span class="type">path</span>.resolve(__dirname, <span class="string">'../src/assets/icons'</span>)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<li><code>webpack.common.js</code>配置：<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">// webpack.common.js </span><br><span class="line"><span class="keyword">alias</span>: &#123; </span><br><span class="line">    <span class="string">'@'</span>: <span class="type">path</span>.resolve(__dirname, <span class="string">'../src'</span>), </span><br><span class="line">    <span class="string">'@components'</span>: <span class="type">path</span>.resolve(__dirname, <span class="string">'../src/components'</span>), </span><br><span class="line">    <span class="string">'@pages'</span>: <span class="type">path</span>.resolve(__dirname, <span class="string">'../src/pages'</span>), </span><br><span class="line">    <span class="string">'@images'</span>: <span class="type">path</span>.resolve(__dirname, <span class="string">'../src/assets/images'</span>), </span><br><span class="line">    <span class="string">'@fonts'</span>: <span class="type">path</span>.resolve(__dirname, <span class="string">'../src/assets/fonts'</span>), </span><br><span class="line">    <span class="string">'@icons'</span>: <span class="type">path</span>.resolve(__dirname, <span class="string">'../src/assets/icons'</span>)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
 </li>
+</ul>
+<a id="more"></a>
+
+<ul>
 <li><p>如果是<code>typescript</code>环境下，需在<code>tsconfig.json</code>中添加<code>paths</code>的配置：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&#123; </span><br><span class="line">    <span class="attr">"compilerOptions"</span>: &#123; </span><br><span class="line">        <span class="attr">"sourceMap"</span>: <span class="literal">true</span>, </span><br><span class="line">        <span class="attr">"noImplicitAny"</span>: <span class="literal">false</span>, </span><br><span class="line">        <span class="attr">"noUnusedLocals"</span>: <span class="literal">true</span>, </span><br><span class="line">        <span class="attr">"noUnusedParameters"</span>: <span class="literal">true</span>, </span><br><span class="line">        <span class="attr">"module"</span>: <span class="string">"es2015"</span>, </span><br><span class="line">        <span class="attr">"target"</span>: <span class="string">"es6"</span>, </span><br><span class="line">        <span class="attr">"lib"</span>: [ <span class="string">"es2015"</span>, <span class="string">"es2017"</span>, <span class="string">"dom"</span> ], </span><br><span class="line">        <span class="attr">"removeComments"</span>: <span class="literal">true</span>, </span><br><span class="line">        <span class="attr">"allowSyntheticDefaultImports"</span>: <span class="literal">true</span>, </span><br><span class="line">        <span class="attr">"esModuleInterop"</span>: <span class="literal">true</span>, </span><br><span class="line">        <span class="attr">"moduleResolution"</span>: <span class="string">"node"</span>, </span><br><span class="line">        <span class="attr">"pretty"</span>: <span class="literal">true</span>, </span><br><span class="line">        <span class="attr">"jsx"</span>: <span class="string">"preserve"</span>, </span><br><span class="line">        <span class="attr">"allowJs"</span>: <span class="literal">true</span>, </span><br><span class="line">        <span class="attr">"baseUrl"</span>: <span class="string">"."</span>, </span><br><span class="line">        <span class="attr">"rootDir"</span>: <span class="string">"./src"</span>, </span><br><span class="line">        <span class="attr">"outDir"</span>: <span class="string">"./dist/"</span>, </span><br><span class="line">        <span class="attr">"paths"</span>: &#123; </span><br><span class="line">            <span class="attr">"@/*"</span>: [<span class="string">"./src/*"</span>], </span><br><span class="line">            <span class="attr">"@components/*"</span>: [<span class="string">"./src/components/*"</span>], </span><br><span class="line">            <span class="attr">"@pages/*"</span>: [<span class="string">"./src/pages/*"</span>], </span><br><span class="line">            <span class="attr">"@images/*"</span>: [<span class="string">"./src/assets/images/*"</span>], </span><br><span class="line">            <span class="attr">"@fonts/*"</span>: [<span class="string">"./src/assets/fonts/*"</span>], </span><br><span class="line">            <span class="attr">"@icons/*"</span>: [<span class="string">"./src/assets/icons/*"</span>]</span><br><span class="line">        &#125;   </span><br><span class="line">    &#125;, </span><br><span class="line">    <span class="attr">"include"</span>: [<span class="string">"./src/**/*"</span>], </span><br><span class="line">    <span class="attr">"exclude"</span>: [<span class="string">"node_modules"</span>] </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -644,6 +648,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
@@ -652,15 +660,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">vue</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color3">express</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -668,11 +668,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">express</a>
+                <a href="javascript:void(0)" class="js-tag color4">vue</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">架构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
             
             <div class="clearfix"></div>
