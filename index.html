@@ -154,6 +154,119 @@
  * @LastAuthor: Do not edit
  * @copyright: lizenghua
  -->
+<article id="post-vuex" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/12/vuex/">vuex 笔记 - vue</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/12/vuex/" class="archive-article-date">
+  <time datetime="2019-11-12T01:58:06.229Z" itemprop="datePublished">
+    <i class="icon-calendar icon"></i>
+    
+    
+    今天
+    
+  </time>
+</a>
+
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><h3 id="组件之间共享数据方式"><a href="#组件之间共享数据方式" class="headerlink" title="组件之间共享数据方式"></a>组件之间共享数据方式</h3><ul>
+<li>父向子传值：<code>v-bind 属性绑定</code></li>
+<li>子向父传值：<code>v-on 事件绑定</code></li>
+<li>兄弟组件之间共享数据：<code>EventBus</code><ul>
+<li><code>$on</code> 接收数据的那个组件</li>
+<li><code>$emit</code> 发送数据的那个组件</li>
+</ul>
+</li>
+<li>vuex<ul>
+<li>概念：实现组件全局状态（数据）管理的一种机制，可以方便的实现组件之间数据的共享</li>
+<li>好处：<ul>
+<li>能在vuex中集中管理共享的数据，易于开发和后期维护</li>
+<li>能高效的实现组件之间的数据共享，提高开发效率</li>
+<li>存储在 vuex 中的数据都是响应式的，能够实时保持数据与页面的同步<ul>
+<li>提前在 store的 state 中初始化好所需的属性</li>
+<li>当给 state 中的对象添加新属性时，使用下面方式：<ul>
+<li><ol>
+<li>使用 Vue.set(obj, ‘newProp’, 123);</li>
+<li>用新对象给旧对象重新赋值</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/2019/11/12/vuex/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/12/vuex/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+  
+    <!--
+ * @message:
+ * @Author: lzh
+ * @since: 2019-10-16 16:07:30
+ * @lastTime: 2019-10-16 19:01:41
+ * @LastAuthor: Do not edit
+ * @copyright: lizenghua
+ -->
 <article id="post-webpack性能优化" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -171,7 +284,7 @@
     <i class="icon-calendar icon"></i>
     
     
-    今天
+    2019-10-31
     
   </time>
 </a>
@@ -806,102 +919,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/10/16/es6_reduce/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-
-  
-    <!--
- * @message:
- * @Author: lzh
- * @since: 2019-10-16 16:07:30
- * @lastTime: 2019-10-16 19:01:41
- * @LastAuthor: Do not edit
- * @copyright: lizenghua
- -->
-<article id="post-es6_data" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/16/es6_data/">将扁平化的数据转化为多维数组</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/16/es6_data/" class="archive-article-date">
-  <time datetime="2019-10-16T12:14:51.653Z" itemprop="datePublished">
-    <i class="icon-calendar icon"></i>
-    
-    
-    2019-10-16
-    
-  </time>
-</a>
-
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、扁平数据"><a href="#一、扁平数据" class="headerlink" title="一、扁平数据"></a>一、扁平数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> data = &#123;</span><br><span class="line">    parent:[</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件1"</span>,</span><br><span class="line">            pid: <span class="number">1</span>,</span><br><span class="line">            id: <span class="number">10001</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件2"</span>,</span><br><span class="line">            pid: <span class="number">1</span>,</span><br><span class="line">            id: <span class="number">10002</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件2-1"</span>,</span><br><span class="line">            pid: <span class="number">2</span>,</span><br><span class="line">            id: <span class="number">10003</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件2-2"</span>,</span><br><span class="line">            pid: <span class="number">2</span>,</span><br><span class="line">            id: <span class="number">10004</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件1-1-1"</span>,</span><br><span class="line">            pid: <span class="number">4</span>,</span><br><span class="line">            id: <span class="number">10005</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件2-1-1"</span>,</span><br><span class="line">            pid: <span class="number">5</span>,</span><br><span class="line">            id: <span class="number">10006</span></span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    child:[</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹1"</span>,</span><br><span class="line">            pid: <span class="number">0</span>,</span><br><span class="line">            id: <span class="number">1</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹2"</span>,</span><br><span class="line">            pid: <span class="number">0</span>,</span><br><span class="line">            id: <span class="number">2</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹3"</span>,</span><br><span class="line">            pid: <span class="number">0</span>,</span><br><span class="line">            id: <span class="number">3</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹1-1"</span>,</span><br><span class="line">            pid: <span class="number">1</span>,</span><br><span class="line">            id: <span class="number">4</span></span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">            name: <span class="string">"文件夹2-1"</span>,</span><br><span class="line">            pid: <span class="number">2</span>,</span><br><span class="line">            id: <span class="number">5</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2019/10/16/es6_data/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">es6</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/16/es6_data/">展开全文 >></a>
         </p>
       
 
