@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="欢迎来到李增华的博客">
 <meta property="og:description" content="项目路由出现message: “Navigating to current location (XXX) is not allowed”的问题 出现场景：当多次点击相同路由时  原因：在路由中添加了相同的路由。  解决：重写路由的push方法 123456789101112131415161718192021// src/router/index.jsimport Vue from &quot;vue&quot;;i">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-31T09:31:15.985Z">
+<meta property="og:updated_time" content="2019-11-18T03:15:25.537Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue 开发中常见问题">
 <meta name="twitter:description" content="项目路由出现message: “Navigating to current location (XXX) is not allowed”的问题 出现场景：当多次点击相同路由时  原因：在路由中添加了相同的路由。  解决：重写路由的push方法 123456789101112131415161718192021// src/router/index.jsimport Vue from &quot;vue&quot;;i">
@@ -274,7 +274,32 @@
 <li><p>原因：因为使用 sass 预处理器，所以无法使用 <code>&gt;&gt;&gt;</code> 提高优先级；因为 sass 对其无法解析</p>
 </li>
 <li><p>解决：使用<code>/deep/</code> 或者<code>::v-deep</code></p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.van-tab</span>&#123;</span><br><span class="line">    /deep/ .van-elipsis&#123;</span><br><span class="line">        <span class="selector-tag">font-weight</span>: <span class="selector-tag">bold</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.van-tab</span>&#123;</span><br><span class="line">    ::v-deep .van-elipsis&#123;</span><br><span class="line">        <span class="selector-tag">font-weight</span>: <span class="selector-tag">bold</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="swiper-手动滑动后，自动滑动失效问题"><a href="#swiper-手动滑动后，自动滑动失效问题" class="headerlink" title="swiper 手动滑动后，自动滑动失效问题"></a>swiper 手动滑动后，自动滑动失效问题</h3><ul>
+<li><p>解决： 设置<strong>disableOnInteraction</strong> </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> mySwiper = <span class="keyword">new</span> Swiper(<span class="string">'.swiper-container'</span>, &#123;</span><br><span class="line">    speed: <span class="number">500</span>,</span><br><span class="line">    loop: <span class="literal">true</span>,</span><br><span class="line">    autoplay: &#123;</span><br><span class="line">      disableOnInteraction: <span class="literal">false</span>, <span class="comment">// 将此属性的值设置为 false</span></span><br><span class="line">      delay: <span class="number">2500</span>,</span><br><span class="line">    &#125;</span><br><span class="line">    ...</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="webpack的动态import"><a href="#webpack的动态import" class="headerlink" title="webpack的动态import"></a>webpack的动态import</h3><ul>
+<li><p>场景： 在做H5编辑器项目中，动态添加组件中，封装了一个通过name导入组件的方法，出现终端报错：</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Critical dependency: <span class="keyword">the</span> request <span class="keyword">of</span> <span class="keyword">a</span> dependency is <span class="keyword">an</span> expression</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>原因：webpack动态import，是会根据代码里面的给出的路径信息去查找文件的，并且会将所有满足这个路径信息的文件都打成一个chunk，以备后续使用。</p>
+</li>
+<li><p>解决： 在使用动态import的时候，<strong>尽可能使用准确的静态路径，减少变量的影响范围</strong>。</p>
+</li>
+</ul>
+<blockquote>
+<p>这里需要注意，在动态import的时候，路径不能只使用一个变量表示，这样的话，webpack没有办法找到对应的文件。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> importCompByName = <span class="function"><span class="params">name</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> result</span><br><span class="line">  <span class="keyword">import</span>(<span class="string">'@/components/comps/'</span> + name).then(<span class="function"><span class="params">module</span> =&gt;</span> &#123;</span><br><span class="line">    result = <span class="built_in">module</span>.default</span><br><span class="line">  &#125;).catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(error.msg)</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> result</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如下为正确姿势</span></span><br><span class="line"><span class="keyword">import</span>(<span class="string">'./components/'</span>+ ComponentName).then(<span class="function"><span class="params">module</span> =&gt;</span> &#123; ... &#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 如下为错误姿势，会报错</span></span><br><span class="line"><span class="comment">// 下面代码是无效的</span></span><br><span class="line"><span class="keyword">const</span> a = <span class="string">'./temp'</span>;</span><br><span class="line"><span class="keyword">import</span>(a).then(<span class="function"><span class="params">module</span> =&gt;</span> &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="built_in">module</span>.default);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>参考：<a href="http://www.imooc.com/article/294778" target="_blank" rel="noopener">http://www.imooc.com/article/294778</a></li>
 </ul>
 
       
@@ -518,10 +543,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">css</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">es6</a>
               </li>
              
@@ -530,11 +551,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">express</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">scss</a>
+                <a href="javascript:void(0)" class="js-tag color4">css</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -542,7 +559,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">express</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">架构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">scss</a>
               </li>
              
               <li class="article-tag-list-item">
